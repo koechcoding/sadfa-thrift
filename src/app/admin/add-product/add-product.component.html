@@ -1,0 +1,37 @@
+<div class="addProductDiv">
+    <div>
+        <form [formGroup]="form" (ngSubmit)="addProduct()">
+            <div>
+                <label for="Productname">Product Name</label><br>
+                <input type="text" formControlName="TITLE" id="ProductName" placeholder="Product Name" class="form-control" /><br>
+            </div>
+            <div>
+                <label for="Description">Description</label><br>
+                <input type="text" formControlName="DESCRIPTION" id="Description" placeholder="Description" class="form-control" /><br>
+            </div>
+            <div>
+                <label for="Category">Category</label><br>
+                <select formControlName="CATEGORY">
+                    <option *ngFor="let option of Category">{{option}}</option>
+                </select>
+            </div>
+            <div>
+                <label for="Price">Price</label><br>
+                <input type="number" formControlName="PRICE" id="Price" placeholder="Price" class="form-control" /><br>
+            </div>
+
+            <div>
+                <label for="Image url">Image</label><br>
+                <input type="text" formControlName="IMAGE" id="imgurl" placeholder="image url" class="form-control" /><br>
+            </div>
+            <div>
+                <label for="Quantity">Quantity</label><br>
+                <input type="text" formControlName="QUANTITY" id="Quantity" placeholder="Quantity" class="form-control" /><br>
+            </div>
+
+            <div>
+                <button type="submit">Add Product</button>
+            </div>
+        </form>
+    </div>
+</div>
